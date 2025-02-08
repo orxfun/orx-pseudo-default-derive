@@ -1,11 +1,12 @@
 # orx-pseudo-default-derive
 
 [![orx-pseudo-default-derive crate](https://img.shields.io/crates/v/orx-pseudo-default-derive.svg)](https://crates.io/crates/orx-pseudo-default-derive)
+[![orx-pseudo-default-derive crate](https://img.shields.io/crates/d/orx-pseudo-default-derive.svg)](https://crates.io/crates/orx-pseudo-default-derive)
 [![orx-pseudo-default-derive documentation](https://docs.rs/orx-pseudo-default-derive/badge.svg)](https://docs.rs/orx-pseudo-default-derive)
 
 Derives the [`PseudoDefault`](https://crates.io/crates/orx-pseudo-default) trait that allows to create a cheap default instance of a type, which does not claim to be useful.
 
-# Example
+## Example
 
 ```rust
 use orx_pseudo_default::PseudoDefault;
@@ -35,3 +36,7 @@ assert_eq!(
     MyStruct::pseudo_default().z
 );
 ```
+
+## License
+
+Dual-licensed under [Apache 2.0](LICENSE-APACHE) or [MIT](LICENSE-MIT).
