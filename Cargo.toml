@@ -17,4 +17,4 @@ syn = { version = "2.0.98", features = ["derive", "parsing"] }
 quote = { version = "1.0.38" }
 
 [dev-dependencies]
-orx-pseudo-default = { path = "../orx-pseudo-default", default-features = false }
+orx-pseudo-default = { version = "2.0.0", default-features = false }
