@@ -3,6 +3,7 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn::{DataEnum, DataStruct, DataUnion, DeriveInput, Fields, Ident};
 
+#[allow(clippy::unwrap_used)]
 pub(crate) fn derive_pseudo_default(input: TokenStream) -> TokenStream {
     let ast: DeriveInput = syn::parse(input).unwrap();
     impl_pseudo_default(ast)
@@ -54,10 +55,12 @@ fn impl_for_unnamed_struct(typ: Ident, data: DataStruct) -> TokenStream {
     .into()
 }
 
+#[allow(clippy::todo)]
 fn impl_for_enum(_typ: Ident, _data: DataEnum) -> TokenStream {
     todo!("Deriving PseudoDefault for enums is not supported yet.")
 }
 
+#[allow(clippy::todo)]
 fn impl_for_union(_typ: Ident, _data: DataUnion) -> TokenStream {
     todo!("Deriving PseudoDefault for unions is not supported yet.")
 }
